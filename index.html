@@ -4,11 +4,20 @@
         <link rel="stylesheet" href="./style.css" type="text/css">
     </head>
     <body>
-        <div id="app"> <h2>{{ greeting }}</h2> 
+        <div id="app"> 
+            <h2>{{ greeting }}</h2> 
             <p>by {{ user }} who lives in {{ city }}</p> 
-            <button onClick="changeGreeting()">        
+            <button v-on:Click="changeGreeting">        
                 Change Greeting </button> 
+                <ul>
+                    <li v-for="item in items" :key="item.message">
+                        {{ item.message }}
+                    </li>
+                </ul>
+
+                <button v-on:Click="add">Add</button>
             </div> 
+           
 
        <script src="./main .js"></script>
     </body>
