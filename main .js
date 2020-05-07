@@ -6,11 +6,20 @@ new Vue({
         city: 'Mandi',
     },
     methods: {
-        // instance methods
-        changeGreeting() { 
-            this.greeting = this.greeting === 'Hello World!' ? 
-            'What is up!' : 
-            'Hello World!'; 
+        addgreeting() {
+            // greeting is not initialized
+            this.greeting = 'Hello World!';
         }
+        // vanilla Js Implementation
+        let greetingTag = document.getElementsByTagName("h2")[0];
+
+        changeGreeting = () => {
+            if (greetingTag.textContent === 'Hello World!') {
+                greetingTag.textContent = 'What is up!';    
+            } else {
+                greetingTag.textContent = 'Hello World!';
+            }
+        }
+
     },
 });
