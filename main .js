@@ -4,10 +4,12 @@ new Vue({
         greeting: '',
         user: 'Jyoti Attri',
         city: 'Mandi',
+        alertMessage: '',
         items: [
             { message: 'foo' },
             { message: 'bar' }
         ]
+       
     },
     methods: {
         addgreeting() {
@@ -21,7 +23,13 @@ new Vue({
         },
         add() {
             this.items.push({message: 'hello'})
-        }
+        },
+        alertMessageGreeting() {
+            this.alertMessage = 'You typed Something';
+        },
+        alertEnterGreeting() {
+            this.alertMessage ='You typed and press Enter!';
+        },
         
 
     },
