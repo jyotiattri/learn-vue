@@ -8,8 +8,8 @@ new Vue({
         items: [
             { message: 'foo' },
             { message: 'bar' }
-        ]
-       
+        ],
+        cityImage: 'https://bit.ly/2SKJPqJ',
     },
     methods: {
         addgreeting() {
