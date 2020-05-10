@@ -9,7 +9,10 @@ new Vue({
             { message: 'foo' },
             { message: 'bar' }
         ],
-        cityImage: 'https://bit.ly/2SKJPqJ',
+        cityImage: './images/toronto.jpg',
+        data: {    
+            numbers: [1, 10, 100, 1000, 10000],
+         },
     },
     methods: {
         // addgreeting() {
@@ -31,9 +34,9 @@ new Vue({
         //     this.alertMessage ='You typed and press Enter!';
         // },
         changeCity() {
-            this.cityImage = this.cityImage === 'https://bit.ly/2SKJPqJ'?
-            'https://bit.ly/2Rd4gQ3':
-            'https://bit.ly/2SKJPqJ';
+            this.cityImage = this.cityImage === './images/toronto.jpg'?
+            './images/lagos.jpg':
+            './images/toronto.jpg';
             this.city = this.city === 'Toronto'?
             'Lagos':
             'Toronto';
