@@ -34,8 +34,8 @@
    
       <!-- list of numbers in ascending order -->
       <ul>
-         <li v-for="number in data.numbers">
-      <p>{{ number }}</p>
+         <li v-for="number in data.numbers" :key="number.id">
+      <p>{{ number.value }}</p>
       <input placeholder="type something.." />
     </li>
         </ul> 
