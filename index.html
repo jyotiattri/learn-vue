@@ -1,6 +1,7 @@
 <html>
   <head>
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.js"> </script>
     <link rel="stylesheet" href="./style.css" type="text/css" />
   </head>
   <body>
@@ -33,13 +34,16 @@
    
       <!-- list of numbers in ascending order -->
       <ul>
-         <li v-for="number in data.numbers">{{ number }}</li> 
-      </ul> 
-
+         <li v-for="number in data.numbers">
+      <p>{{ number }}</p>
+      <input placeholder="type something.." />
+    </li>
+        </ul> 
+        <button @click="shuffle">Shuffle!</button> 
    
    
     </div>
-
+    
     <script src="./main .js"></script>
   </body>
 </html>

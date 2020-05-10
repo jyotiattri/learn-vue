@@ -40,7 +40,10 @@ new Vue({
             this.city = this.city === 'Toronto'?
             'Lagos':
             'Toronto';
-        }
+        },
+        shuffle() { 
+            this.data.numbers = _.shuffle(this.data.numbers) }
+
 
     },
 });
