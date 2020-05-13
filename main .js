@@ -3,5 +3,9 @@ new Vue({
     data: {
        message: 'Greetings!'
     },
-   
+   methods: {
+       reverseString(string) {
+           return string.split('').reverse().join('');
+       },
+   }
 });
