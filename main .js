@@ -6,10 +6,10 @@ new Vue({
     },
 watch: {
     km() {
-        // whenever km changes, this function runs
+        this.m = this.km ? this.km * 1000 : 0;
         },
         m() {
-            //whenever m changes -this will runs
+            this.km = this.m ? this.m / 1000 : 0;
         }
    }
 });
