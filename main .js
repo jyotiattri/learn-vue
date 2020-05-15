@@ -1,25 +1,18 @@
 new Vue({
-  el: "#app",
-  data: { 
-    name: 'Loading...',
-    email: 'Loading...',
-    company: {
-      name: 'Loading...',
-      catchPhrase: 'Loading...',
-    }
-    },
-   created() {
-   axios.get(
-     'https://jsonplaceholder.typicode.com/users'
-   ) .then((response) => {
-     const data = response.data;
-     const randomUser = response.data[
-       Math.floor(Math.random() * data.length)
-     ];
-     this.name = randomUser.name;
-     this.email = randomUser.email;
-     this.company = randomUser.company;
-     this.company.catchPhrase = randomUser.company.catchPhrase;
-   });
- },
-});
+    el: '#app',
+      data: {
+         // ...
+         }, 
+         created() { 
+           // instance has been created
+           },
+            mounted() {
+               // instance has been mounted 
+              }, 
+              
+              updated() { // instance has been updated 
+              }, 
+              destroyed() { 
+                // instance had been destroyed 
+              }
+             });
