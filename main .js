@@ -1,11 +1,14 @@
 new Vue({
   el: "#app",
   data: { 
-    // ...
+    name: 'Loading...',
+    email: 'Loading...',
+    company: {
+      name: 'Loading...',
+      catchPhrase: 'Loading...',
     }
-   },
-   created()
- {
+    },
+   created() {
    axios.get(
      'https://jsonplaceholder.typicode.com/users'
    ) .then((response) => {
