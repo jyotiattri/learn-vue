@@ -1,14 +1,9 @@
-new Vue({
-    el: '#app',
-      data: {
-         tweets
-         }, 
-       const tweets = [
+   const tweets = [
          {
            id: 1,
            name: 'James',
            handle: '@jokerjames',
-           img: './images/james.png',
+           img: './images/photo.jpg',
            tweet: "If you don't succed, dust yourself off...",
            likes: 10,
          },
@@ -16,7 +11,7 @@ new Vue({
           id: 2,   
           name: 'Fatima',
           handle: '@fantasticfatima',    
-          img: './images/fatima.png',   
+          img: './images/photo.jpg',   
           tweet: 'Better late than never but never late...',    
           likes: 12, 
         }, 
@@ -24,9 +19,14 @@ new Vue({
           id: 3,    
           name: 'Xin',    
           handle: '@xeroxin',    
-          img: './images/xin.png',    
+          img: './images/photo.jpg',    
           tweet: 'Beauty in the struggle...',    
           likes: 18, 
         }
-       ]
+       ];
+       new Vue({
+        el: '#app',
+          data: {
+             tweets
+             }
              });
