@@ -1,18 +1,32 @@
 new Vue({
     el: '#app',
       data: {
-         // ...
+         tweets
          }, 
-         created() { 
-           // instance has been created
-           },
-            mounted() {
-               // instance has been mounted 
-              }, 
-              
-              updated() { // instance has been updated 
-              }, 
-              destroyed() { 
-                // instance had been destroyed 
-              }
+       const tweets = [
+         {
+           id: 1,
+           name: 'James',
+           handle: '@jokerjames',
+           img: './images/james.png',
+           tweet: "If you don't succed, dust yourself off...",
+           likes: 10,
+         },
+        {     
+          id: 2,   
+          name: 'Fatima',
+          handle: '@fantasticfatima',    
+          img: './images/fatima.png',   
+          tweet: 'Better late than never but never late...',    
+          likes: 12, 
+        }, 
+        {    
+          id: 3,    
+          name: 'Xin',    
+          handle: '@xeroxin',    
+          img: './images/xin.png',    
+          tweet: 'Beauty in the struggle...',    
+          likes: 18, 
+        }
+       ]
              });

@@ -3,26 +3,46 @@
     <script src="https://unpkg.com/vue"></script>
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css " />
   </head>
   <body>
     <div id="app">
-   <div class="card">
-     <header class="card-header">
-       <p class="card-header-title">
-         {{ name }}
-       </p>
-     </header>
-     <div class="card-content">
-       <div class="content">
-         <p>{{ company. name}}</p>
-         <p>{{ company.catchPhrase }}</p>
-       </div>
+   <div class="tweet">
+     <div class="box">
+       <article class="media">
+         <div class="media-left">
+           <figure class="image is-64x64">
+            <img :src="tweets[0].img">
+           </figure>
+         </div>
+
+         <div class="media-content"> 
+           <div class="content"> 
+             <p> <strong>{{tweets[0].name}}</strong>
+               <small>{{tweets[0].handle}}</small>
+                <br>                  
+          {{tweets[0].tweet}} 
+        </p> 
+      </div> 
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span class="likes">
+            {{tweets[0].likes}}
+          </span>
+        </a>
+      </div>
+       </article>
      </div>
-     <footer class="card-footer">
-       <a href="#" class="card-footer-item">
-         {{ email }}
-       </a>
-     </footer>
+     <div class="control has-icons-left">
+       <input class="input is-small"
+       placeholder="Tweet your reply...">
+       <span class="icon is-small is-left">
+         <i class="fas fa-envelope"></i>
+       </span> 
+     </div>
    </div>
     </div>
 
