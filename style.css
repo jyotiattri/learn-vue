@@ -19,3 +19,9 @@ input {
 ul {
     list-style: none;
 }
+.box {
+    margin-bottom: 0px !important;
+}
+.tweet {
+    margin-bottom: 20px;
+}
