@@ -24,6 +24,29 @@ const tweets = [
     likes: 18,
   },
 ];
+vue.component("tweet-content", {
+  template: `
+  <div class="media-content">
+  <div class="content">
+  <p>
+  <strong>{{ tweet.name }}</strong>
+  <small>{{ tweet.handle }}</small>
+  <br>
+  {{tweet.tweet}}
+  </p>
+  </div>
+  <div class="level-left">
+  <a class="level-item">
+  <span class="icon is-small">
+  <i class="fas fa-heart"></i>
+  </span>
+  <span class="likes">{{ tweet.likes }}</span>
+  </a>
+  </div>
+  </div>
+  `,
+  props: ["tweet"],
+});
 Vue.component("tweet-component", {
   template: `      
    <div class="tweet">      
@@ -31,32 +54,14 @@ Vue.component("tweet-component", {
    <article class="media">         
     <div class="media-left">          
       <figure class="image is-64x64">      
-              <img src="./images/photo.jpg">       
+              <img :src="./images/photo.jpg">       
                    </figure>         
-                    </div>         
-                     <div class="media-content">           
-                      <div class="content">           
-                         <p>               
-                          <strong>James</strong>               
-                           <small>@jokerjames</small>              
-                             <br>              
-                               If you don't succeed, dust yourself off...             
-                                </p>           
-                                 </div>          
-                                   <div class="level-left">     
-                                            <a class="level-item">         
-                                                   <span class="icon is-small"> 
-                                                        <i class="fas fa-heart"></i>               
-                                                         </span>               
-                                                          <span class="likes">                  
-                                                          10                
-                                                          </span>              
-                                                          </a>           
-                                                           </div>          
-                                                           </div>        
-                                                           </article>     
-                                                            </div>     
-                                                             <div class="control has-icons-left">
+                    </div>  
+                    <tweet-content :tweet="tweet"></tweet-content>       
+                 
+                                  </article>     
+                                      </div>     
+                  <div class="control has-icons-left">
              <input class="input is-small"        
                placeholder="Tweet your reply..." /> 
                       <span class="icon is-small is-left"> 
@@ -64,12 +69,7 @@ Vue.component("tweet-component", {
                                </span>      
                                </div>    
                                </div>  `,
-                               props: {
-                                 tweet: {
-                                   type: Object,
-                                   required: true
-                                 }
-                               }
+  props: ["tweet"],
 });
 new Vue({
   el: "#app",
