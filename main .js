@@ -64,6 +64,12 @@ Vue.component("tweet-component", {
                                </span>      
                                </div>    
                                </div>  `,
+                               props: {
+                                 tweet: {
+                                   type: Object,
+                                   required: true
+                                 }
+                               }
 });
 new Vue({
   el: "#app",
