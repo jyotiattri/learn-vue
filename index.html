@@ -1,6 +1,6 @@
 <html>
   <head>
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css " />
@@ -8,8 +8,9 @@
   <body>
     <div id="app">
    <tweet-component v-for="tweet in tweets"
-   :key="tweet.id">
-  </tweet-component>
+   :key="tweet.id"
+   :tweet="tweet">
+   </tweet-component>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"> </script> 
