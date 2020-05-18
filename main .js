@@ -42,6 +42,12 @@ Vue.component("tweet-content", {
   </span>
   <span class="likes">{{ tweet.likes }}</span>
   </a>
+  <a class="level-item"
+  @click="$emit('add', tweet)">
+  <span class="icon is-small">
+  <i class="fas fa-plus"></i>
+  </span>
+  </a>
   </div>
   </div>
   `,
