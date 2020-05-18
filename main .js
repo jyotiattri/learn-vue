@@ -63,7 +63,8 @@ Vue.component("tweet-component", {
               <img src="./images/photo.jpg">       
                    </figure>         
                     </div>  
-                    <tweet-content :tweet="tweet"></tweet-content>       
+                    <tweet-content :tweet="tweet"
+                    @add="$emit('add', $event)"></tweet-content>       
                  
                                   </article>     
                                       </div>     
