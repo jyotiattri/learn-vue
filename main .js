@@ -83,4 +83,14 @@ new Vue({
   data: {
     tweets,
   },
+  methods: {
+    addTweetMessage(tweet) {
+      let newTweet ={};
+      let lastTweetObjectID =
+      this.tweets[this.tweets.length -1].id
+      newTweet = Object.assign({}, tweet);
+      newTweet.id = lastTweetObjectID +1;
+
+    }
+  }
 });
