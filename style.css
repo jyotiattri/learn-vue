@@ -69,3 +69,12 @@ ul {
   #app .tweets-move {
 	transition: transform 1s;
   }
+  .component-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #00d1b2;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
