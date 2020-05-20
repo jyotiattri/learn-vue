@@ -1,15 +1,13 @@
-let inlineTemp ={
+let xTemp = {
+  template: '#x-template-component',
   props: ['message']
 }
-
 new Vue({
   el: '#app',
   data: {
     message: 'Greetings!',
   },
   components: {
-    // 'single-line-template': singleLineTemplate
-    'inline-temp' : inlineTemp
+    'x-temp': xTemp
   }
 });
-
