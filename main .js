@@ -1,7 +1,5 @@
-let singleLineTemplate = {
-template: '<div class="card"><header class="card-header\
-card-header-title">{{ message }}</header></div>',
-props: ['message']
+let inlineTemp ={
+  props: ['message']
 }
 
 new Vue({
@@ -10,7 +8,8 @@ new Vue({
     message: 'Greetings!',
   },
   components: {
-    'single-line-template': singleLineTemplate
+    // 'single-line-template': singleLineTemplate
+    'inline-temp' : inlineTemp
   }
 });
 
