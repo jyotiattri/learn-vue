@@ -8,16 +8,11 @@
 
   <body>
     <div id="app">
-   <x-temp :message="message"></x-temp>
-
-   <script type="text/x-template"
-   id="x-template-component">
-  <div class="card">
-    <header class="card-header card-header-title">
-      {{ message }}
-    </header>
-  </div>
-</script>
+   <div class="render-card">
+     <header class="card-header card-header-title">
+       {{ message }}
+     </header>
+   </div>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"> </script> 
