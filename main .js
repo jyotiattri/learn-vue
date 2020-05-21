@@ -11,3 +11,20 @@ new Vue({
     'x-temp': xTemp
   }
 });
+
+
+let renderComponent = {
+  render(createElement) {
+    return createElement(
+      'div', {
+        'attrs': {
+          class: 'render-card'
+        },
+      },
+      [
+        createElement('header')
+      ]
+    );
+  },
+  props: ['message']
+}
