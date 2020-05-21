@@ -8,11 +8,7 @@
 
   <body>
     <div id="app">
-   <div class="render-card">
-     <header class="card-header card-header-title">
-       {{ message }}
-     </header>
-   </div>
+      <render-component :message="message"></render-component>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"> </script> 

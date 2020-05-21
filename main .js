@@ -1,12 +1,3 @@
-
-new Vue({
-  el: '#app',
-  data: {
-    message: 'Greetings!',
-  },
-});
-
-
 let renderComponent = {
   render(h) {
     return h(
@@ -14,15 +5,24 @@ let renderComponent = {
         'attrs': {
           class: 'render-card'
         },
-      },
-      [
+      }, [
         h('header', {
           'attrs': {
-            class: 'card-header card-header-title'
-          }
+            class: 'card-header card-header-title',
+          },
         }, this.message)
       ]
     );
   },
   props: ['message']
 }
+
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Greetings!',
+  },
+  components: {
+    'render-component': renderComponent
+  }
+});
